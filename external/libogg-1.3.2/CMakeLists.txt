@@ -1,0 +1,5 @@
+project(libogg C)
+add_definitions(-D_CRT_SECURE_NO_WARNINGS)
+include_directories(include)
+file(GLOB libogg_SRC include/ogg/*.h src/bitwise.c src/framing.c)
+add_library(libogg STATIC ${libogg_SRC})
