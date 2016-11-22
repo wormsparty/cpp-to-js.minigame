@@ -75,10 +75,6 @@ int window_begin(const std::string program_name)
         return 0;
     }
 
-    // TODO: There should be a better way to handle this,
-    // it's still possible to make it appear with right-click or so.
-    SDL_ShowCursor(0);
-
     return 1;
 }
 
