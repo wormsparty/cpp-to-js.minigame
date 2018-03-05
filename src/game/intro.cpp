@@ -215,7 +215,7 @@ static bool intro_update(float dt, input_state_t input_state)
 		seagull_threshold = seagull_time_dist(random_engine);
 	}
 
-	// After the 3 seconds transition, switch to the next scene.
+	// After the transition, switch to the next scene.
 	return transition_timer < 5.0f;
 }
 
@@ -230,19 +230,19 @@ static void intro_render(font_t* font, opengl_state_t* state)
 	opengl_rectangle(REFERENCE_WIDTH, 200 - (int)sky_delta);
 	opengl_color(1.0f, 1.0f, 1.0f);
 
-	// Cloud - we draw two of them to make a 'scrolling' effect
-	opengl_move(-(int)cloud_delta, 100 - (int)sky_delta);
-	opengl_texture(cloud, 0);
-	opengl_move(REFERENCE_WIDTH, 0);
-	opengl_texture(cloud, 0);
-	opengl_move((int)cloud_delta - REFERENCE_WIDTH, 0);
+    // Cloud - we draw two of them to make a 'scrolling' effect
+    opengl_move(-(int)cloud_delta, 100 - (int)sky_delta);
+    opengl_texture(cloud, 0);
+    opengl_move(REFERENCE_WIDTH, 0);
+    opengl_texture(cloud, 0);
+    opengl_move((int)cloud_delta - REFERENCE_WIDTH, 0);
 
-	// Water - we draw two of them to make a 'scrolling' effect
-	opengl_move(-(int)water_delta, 100);
-	opengl_texture(water, 0);
-	opengl_move(REFERENCE_WIDTH, 0);
-	opengl_texture(water, 0);
-	opengl_move((int)water_delta - REFERENCE_WIDTH, texture_frame_height(water));
+    // Water - we draw two of them to make a 'scrolling' effect
+    opengl_move(-(int)water_delta, 100);
+    opengl_texture(water, 0);
+    opengl_move(REFERENCE_WIDTH, 0);
+    opengl_texture(water, 0);
+    opengl_move((int)water_delta - REFERENCE_WIDTH, texture_frame_height(water));
 
 	// Silhouette
     int silhouette_frame;
