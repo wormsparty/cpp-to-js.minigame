@@ -1,5 +1,8 @@
 .DS_Store
 .idea
-glew.pc
-glewmx.pc
 build
+CMakeFiles
+CMakeCache.txt
+Makefile
+a.man
+cmake_install.cmake
