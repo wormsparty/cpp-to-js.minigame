@@ -16,7 +16,7 @@
 #include "../include/texture.h"
 
 #include <iostream>
-
+#include <cstring>
 
 static GLfloat projection[16];
 static opengl_state_t current_state;

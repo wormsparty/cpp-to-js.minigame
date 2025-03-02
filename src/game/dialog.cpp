@@ -7,7 +7,7 @@ struct dialog_t
 {
 	float start_timer;
 	float position_timer;
-	int position;
+	unsigned int position;
 	std::string text;
 	float r, g, b;
 };
